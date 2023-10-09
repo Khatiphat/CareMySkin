@@ -1,0 +1,47 @@
+
+
+<ion-content [fullscreen]="true">
+      <ion-label id="login" size="large">เข้าสู่ระบบ</ion-label>
+
+      <img src="assets/image/log1-1.png" id="pic1">
+        <form [formGroup]="loginForm" (ngSubmit)="submitForm()" novalidate>
+            <div id="email">
+              <ion-label id="texte" style="font-family: 'Noto Sans Thai', sans-serif;">อีเมล</ion-label>
+              <ion-input formControlName="email" placeholder="กรอกอีเมล" [(ngModel)]="loginEmail"></ion-input>
+              <div *ngIf="this.loginForm.controls?.email.touched && this.loginForm.controls?.email.invalid">
+                <div class="error ion-padding" *ngIf="errorControl.email.errors?.required">
+                  <ion-text class="vali" id="vali" color="danger">กรุณากรอกอีเมล</ion-text>
+                </div>
+                <div class="ion-padding" *ngIf="errorControl.email.errors?.pattern">
+                  <ion-text class="vali" id="vali" color="danger">อีเมลไม่ถูกต้อง</ion-text>
+                </div>
+              </div>
+            </div>
+
+            <div id="password">
+              <ion-label id="textp" style="font-family: 'Noto Sans Thai', sans-serif;" >รหัสผ่าน</ion-label>
+              <ion-input formControlName="password" placeholder="กรอกรหัสผ่าน" type="password" [(ngModel)]="loginPassword"></ion-input>
+              <div *ngIf="this.loginForm.controls?.password.touched && this.loginForm.controls?.password.invalid">
+                <div class="error ion-padding" *ngIf="errorControl.password.errors?.required">
+                  <ion-text class="vali" id="vali" color="danger">กรุณากรอกรหัสผ่าน</ion-text>
+                </div>
+                <div class="ion-padding" *ngIf="errorControl.password.errors?.pattern">
+                  <ion-text class="vali" id="vali" color="danger">รหัสผ่านไม่ถูกต้อง</ion-text>
+                </div>
+              </div>
+            </div>
+
+            <div id="text-center">
+              <ion-button id="pon1"  fill="solid" (click)="onClickLoginButton()">
+                เข้าสู่ระบบ
+              </ion-button><br>
+        
+              <ion-label id ="text" >หรือ</ion-label><br>
+            
+              <ion-button id="pon2" fill="solid" (click)="onClickRegisterButton()">
+                สมัครสมาชิก
+              </ion-button>
+            </div>
+        
+        </form>
+</ion-content>

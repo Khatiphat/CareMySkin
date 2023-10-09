@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Member </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="['/add-member']">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        สมาชิก
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-grid>
+      <ion-row *ngFor="let member of members">
+        <ion-col>
+          <ion-item>
+            <ion-label>
+              <h3>{{member.username}}</h3>
+              <p>{{member.memberid}}</p>
+              <p>ชื่อ : {{member.firstname}}</p>
+              <p>นามสกุล : {{member.lastname}}</p>
+              <p>หมายเลขโทรศัพท์ : {{member.phonenumber}}</p>
+            </ion-label>
+            <ion-buttons>
+             <ion-button (click)="onClickDeleteMember(member)">
+               <ion-icon name="trash-outline"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+            <!-- <ion-buttons>
+              <ion-button [routerLink]="['/update-member/', member.memberid]">
+                <ion-icon name="build-outline"></ion-icon>
+               </ion-button>
+            </ion-buttons> -->
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

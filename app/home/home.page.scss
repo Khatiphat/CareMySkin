@@ -1,0 +1,89 @@
+body{
+    background-image: url('/assets/image/bg1-3.jpg');
+    background-size: 100%;
+    background-position: center;
+  }
+  
+  button{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  
+    display: flex;
+    justify-content: center;
+    transform: translate(-50% -50%);
+    position: absolute;
+    left: 115px;
+    top:750px;
+  
+    padding: 15px 35px;
+    gap: 10px;
+  
+    background: #ffffff;
+    border-radius: 100px;
+    }
+  
+  #text1 {
+    text-align: center;
+    text-shadow: rgb(71, 71, 71) 0.1em 0.1em 0.2em;
+    color: rgb(255, 255, 255);
+    
+    font-size: 60px;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 7%;
+    transform: translateY(-50%);
+  }
+  
+  #text2 {
+    text-align: center;
+    color: aliceblue;
+    text-shadow: rgb(71, 71, 71) 0.1em 0.1em 0.2em;
+  
+    font-size: 18px;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    transform: translateY(-50%);
+  }
+  
+  #text3 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+  
+    font-size: 30px;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 14%;
+    transform: translateY(-50%);
+  }
+  
+  #text4 {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: rgb(71, 71, 71) 0.1em 0.1em 0.2em;
+
+    font-size: 20px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70%;
+    transform: translateY(-50%);
+  }
+
+  #pic {
+    left: 30%;
+
+    position: absolute;
+    top: 40%;
+    transform: translateY(-45%);
+    
+  }
+  

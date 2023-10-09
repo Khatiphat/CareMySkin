@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{category.categoryname}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-grid>
+      <ion-card *ngFor="let product of products" (click)="nextProductDetail(product.productid)">
+        <ion-img [src]="product.productimage"></ion-img>
+        <ion-card-header>
+          <ion-card-title>แบรนด์ : {{product.productbrand}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{product.productname}}</ion-card-content>
+      </ion-card>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>add-collection</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button (click)="setOpen(true)">Add</ion-button>
+  <div id="container">
+    <ion-grid>
+      <ion-row *ngFor="let sc of selectedCollections">
+        <ion-col>
+          <img src="{{sc.productimage}}" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-button (click)="setOpen(true)" slot="center">เพิ่มรายการผลิตภัณฑ์</ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>เพิ่มคอลเล็กชัน</ion-title>
+          <ion-button fill="clear" (click)="viewOpen(false)">ค้นหา</ion-button>
+          <ion-button fill="clear" (click)="viewOpen(true)">ผลิตภัณฑ์ที่ถูกใจ</ion-button>
+          <ion-button (click)="setOpen(false)">ยกเลิก</ion-button>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding" >
+        <ion-card *ngFor="let product of products" [ngClass]="{'ion-hide': view === true}">
+          <ion-img [src]="product.productimage"></ion-img>
+          <ion-label>{{product.productname}}</ion-label>
+          <ion-label>{{product.productbrand}}</ion-label>
+          <ion-checkbox (ionChange)="tranferValue($event, product.productid)"></ion-checkbox>
+        </ion-card>
+        <ion-card *ngFor="let fav of favorites" [ngClass]="{'ion-hide': view === false}">
+          <ion-img [src]="fav.productimage"></ion-img>
+          <ion-label>{{fav.productname}}</ion-label>
+          <ion-label>{{fav.productbrand}}</ion-label>
+          <ion-checkbox (ionChange)="tranferValue($event, fav.productid)"></ion-checkbox>
+        </ion-card>
+      </ion-content>
+      <ion-footer>
+        <ion-toolbar>
+          <ion-button (click)="setOpen(false)">เพิ่มผลิตภัณฑ์</ion-button>
+        </ion-toolbar>
+      </ion-footer>
+    </ng-template>
+  </ion-modal>
+</ion-content>

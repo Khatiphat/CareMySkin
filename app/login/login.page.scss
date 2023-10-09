@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+
+*{
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+#login {
+    text-align: center;
+    // text-shadow: rgb(71, 71, 71) 0.1em 0.1em 0.2em;
+    color: #000000;
+    font-size: 25px;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5%;
+    
+}
+
+#email{
+    text-align: start;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-family: 'Noto Sans Thai', sans-serif;
+    width: 100%;
+    font-size: 20px;
+
+    
+}
+
+#password {
+    text-align: start;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-family: 'Noto Sans Thai', sans-serif;
+    width: 100%;
+    font-size: 20px;
+}
+
+#pon1 {
+    align-items: center;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 25%;
+    font-size: 20px;
+    margin-left: 38%;
+    left: 50%;
+    right: 0%;
+    top: 60%
+    
+}
+
+#text {
+    text-align: center;
+    
+    font-size: 20px;
+    margin-left: 47%;
+    right: 0%;
+    top: 80%
+    
+}
+
+#pon2 {
+    align-items: center;
+    margin: auto;
+    width: 30%;
+    margin-top: 10%;
+    margin-left: 35.5%;
+    font-size: 20px;
+    left: 50%;
+    right: 0%;
+    top: 70%
+    
+    
+}
+
+// ion-item{
+//     top: 40%;
+//     margin-top: 5%;
+// }
+
+#pic1 {
+    align-items: center;
+    margin-top: 30%;
+    margin-left: 25%;
+    right: 10%;
+    width: 50%;
+}
+
+// ion-label {
+//     font-family: 'Noto Sans Thai', sans-serif;
+// }
+
+// #text-center{
+//     align-items: center;
+//     margin: auto;
+//     width: 30%;
+//     font-size: 15px;
+//     position: absolute;
+//     left: 0%;
+//     right: 0%;
+//     top: 85%
+    
+// }
+#vali{
+    text-align: end;
+    position: absolute;
+}
